@@ -1,6 +1,6 @@
-# 移动端-多选组件设计文档
+# 热点图组件设计文档
 
-## 示例
+
 
 ## 项目背景
 
@@ -42,13 +42,6 @@ const mockList = [
 ]
 
 class App extends Component {
-  state = {
-    val: []
-  }
-  handleChange = val => {
-    console.log('val=====>', val)
-    this.setState({ val })
-  }
   render() {
     return (
       <HotspotMap
@@ -69,7 +62,7 @@ render(<App />, document.getElementById('root'))
 | 名称        | 类型   | 默认值 | 是否必填 | 注释                                                             |
 | ----------- | ------ | ------ | -------- | ---------------------------------------------------------------- |
 | hotspotData | array  | []     | 是       | 需要渲染的点数据                                                 |
-| mapData     | object | []     | 是       | 渲染地图的基础数据择值                                           |
+| mapData     | object |      | 是       | 渲染地图的基础数据择值                                           |
 | mapName     | string | "地图" | 否       | 地图的名称，对应 echarts 中的 series 的 name                     |
 | symbolSize  | number | 5      | 否     | 地图上展示的小圆点的大小。对应 echarts 中的 series 的 symbolSize |
 | tooltip     | object | `{trigger: 'item'}` |否|鼠标悬浮到点上所展示的数据。对应 echarts 的 tooltip|
